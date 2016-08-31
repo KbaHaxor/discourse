@@ -38,8 +38,13 @@ class Wizard
     wizard.append_step(title)
 
     contact = wizard.create_step('contact')
-    contact.add_field(id: 'contact_email', type: 'text', required: true)
+    contact.add_field(id: 'contact_email', type: 'text', required: true, value: SiteSetting.contact_email)
+    contact.add_field(id: 'contact_url', type: 'text', value: SiteSetting.contact_url)
+    contact.add_field(id: 'site_contact_username', type: 'text', value: SiteSetting.site_contact_username)
     wizard.append_step(contact)
+
+    finished = wizard.create_step('finished')
+    wizard.append_step(finished);
 
     wizard
   end

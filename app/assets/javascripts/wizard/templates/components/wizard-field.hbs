@@ -4,4 +4,11 @@
   <div class='input-area'>
     {{input value=field.value class=inputClassName placeholder=field.placeholder}}
   </div>
+  {{#if field.errorDescription}}
+    <div class='field-error-description'>{{field.errorDescription}}</div>
+  {{/if}}
+
+  {{#if field.description}}
+    <div class='field-description'>{{field.description}}</div>
+  {{/if}}
 </label>

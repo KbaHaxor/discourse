@@ -1,6 +1,6 @@
 class WizardFieldSerializer < ApplicationSerializer
 
-  attributes :id, :type, :required, :value, :label, :placeholder
+  attributes :id, :type, :required, :value, :label, :placeholder, :description
 
   def id
     object.id
@@ -41,4 +41,13 @@ class WizardFieldSerializer < ApplicationSerializer
   def include_placeholder?
     placeholder.present?
   end
+
+  def description
+    I18n.t("#{i18n_key}.description", default: '')
+  end
+
+  def include_description?
+    description.present?
+  end
+
 end

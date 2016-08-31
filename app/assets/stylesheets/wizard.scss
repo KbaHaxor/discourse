@@ -77,10 +77,10 @@ body {
       background-color: #6699ff;
       color: white;
       border: 0px;
-      float: right;
       padding: 0.5em;
       outline: 0;
       transition: background-color .3s;
+      margin-right: 0.5em;
 
       &:hover {
         background-color: #80B3FF;
@@ -131,6 +131,9 @@ body {
       }
     }
 
+    button.wizard-btn:last-child {
+      margin-right: 0;
+    }
   }
 
   .wizard-field {
@@ -139,6 +142,16 @@ body {
     }
 
     .input-area {
+      margin-top: 0.5em;
+    }
+
+    .field-error-description {
+      color: red;
+      font-weight: bold;
+    }
+
+    .field-description {
+      color: #999;
       margin-top: 0.5em;
     }
 
